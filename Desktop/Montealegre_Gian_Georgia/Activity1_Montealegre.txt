@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int number, a, b;
+
+cout<<"Enter a number: ";
+cin>>number;
+
+  if (number > 10){
+      a = number + 5;
+      cout<<"The number is "<< a;
+  }  else if (number < 10){
+      b = number * 12;
+      cout<<"The number is "<< b;
+  }
+    
+    
+    return 0;
+}

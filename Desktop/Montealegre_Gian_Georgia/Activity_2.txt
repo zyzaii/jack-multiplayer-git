@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int Contentment, Excitement, Joy, Clarity, Self_love, happiness;
+    /**
+    not_much = 1
+    quite_happy = 2
+    neutrally_happy = 3
+    moderately_happy = 4
+    extremely_happy = 5
+    Contentment
+    Excitement
+    Joy
+    Clarity
+    Self love
+    **/
+    
+    cout<<"Rate your feelings; Contentment: ";
+    cin>>Contentment;
+    cout<<"Rate your feelings; Excitement: ";
+    cin>>Excitement;
+    cout<<"Rate your feelings; Joy: ";
+    cin>>Joy;
+    cout<<"Rate your feelings; Clarity: ";
+    cin>>Clarity;
+    cout<<"Rate your feelings; Self love: ";
+    cin>>Self_love;
+    
+    happiness = (Contentment + Excitement + Joy + Clarity + Self_love)/5;
+    if(happiness == 1){
+        cout<<"You're Not much happy";
+    }else if(happiness == 2){
+        cout<<"You're Quite happy";
+    }else if(happiness == 3){
+        cout<<"You're Neutrally happy";
+    }else if(happiness == 4){
+        cout<<"You're Moderately happy";
+    }else if(happiness == 5){
+        cout<<"You're Extremely happy";
+    }
+    
+
+    return 0;
+}
