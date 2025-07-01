@@ -1,0 +1,29 @@
+CREATE TABLE users (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+
+email VARCHAR(100) UNIQUE
+);
+
+INSERT INTO users (name, email) VALUES
+(&#39;John Doe&#39;, &#39;john@example.com&#39;),
+(&#39;Jane Smith&#39;, &#39;jane@example.com&#39;),
+(&#39;Alice Brown&#39;, &#39;alice@example.com&#39;);
+
+&lt;?php
+$conn = new mysqli(&quot;localhost&quot;, &quot;root&quot;, &quot;&quot;, &quot;webapp_db&quot;);
+
+if ($conn-&gt;connect_error) {
+die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);
+}
+
+$result = $conn-&gt;query(&quot;SELECT * FROM users&quot;);
+
+echo &quot;&lt;h2&gt;User List&lt;/h2&gt;&quot;;
+while ($row = $result-&gt;fetch_assoc()) {
+echo &quot;ID: &quot; . $row[&quot;id&quot;] . &quot; - Name: &quot; . $row[&quot;name&quot;] . &quot; - Email: &quot; .
+$row[&quot;email&quot;] . &quot;&lt;br&gt;&quot;;
+}
+
+$conn-&gt;close();
+?&gt;

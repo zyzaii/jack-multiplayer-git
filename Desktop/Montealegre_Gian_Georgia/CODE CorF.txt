@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+//Note: variable, control flow/ decision, looping, function, array, classes
+
+int main()
+{
+    // built in data type: int, float, double, string, char, bool
+    double value, farenheit, celsius;
+    char option;
+    
+    cout<<"Enter a value: ";
+    cin>>value;
+    cout<<"Choice a conversion, C/F: ";
+    cin>>option;
+    
+    //condition: if,else if, else
+    
+    if(option == 'F', option == 'f'){
+    //ctoF
+        farenheit = (value* 9/5) + 32;
+        cout<< "The farenheit value is, "<<farenheit;
+    }
+    
+    else if(option == 'C', option == 'c'){
+    //Ftoc
+        celsius = (value-32)*5/9;
+        cout<< "The celsius value is, "<<celsius;
+    }
+    
+    else{
+        cout<< "Kulit mo walang ganan boi, C at F lang";
+    }
+    return 0;
+}
